@@ -13,9 +13,9 @@ export default function DocsPage() {
     <div className="flex flex-col gap-28">
       <h1 className={title()}>Kilogramos / Gramos</h1>
       {/* Conversor de kilogramos a gramos y viceversa */}
-      <div className="flex flex-row gap-11 ">
+      <div className="flex lg:flex-row flex-col gap-5 lg:gap-11 ">
         <Input
-          className="w-1/2"
+          className="lg:w-1/2 w-full"
           type="number"
           label="Kilogramos"
           size="lg"
@@ -33,7 +33,7 @@ export default function DocsPage() {
           }}
         />
         <Input
-          className="w-1/2"
+          className="lg:w-1/2 w-full"
           type="text"
           label="Gramos"
           size="lg"
