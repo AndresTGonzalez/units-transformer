@@ -24,6 +24,11 @@ export default function DocsPage() {
           onChange={(e) => {
             const value = parseFloat(e.target.value);
             setKgValue(value);
+            if (value === 0 || isNaN(value)) {
+              setGValue(0);
+              setKgValue(0);
+              return;
+            }
             setGValue(value * 1000);
           }}
         />
@@ -36,6 +41,11 @@ export default function DocsPage() {
           value={gValue.toString()}
           onChange={(e) => {
             const value = parseFloat(e.target.value);
+            if (value === 0 || isNaN(value)) {
+              setGValue(0);
+              setKgValue(0);
+              return;
+            }
             setGValue(value);
             setKgValue(value / 1000);
           }}
